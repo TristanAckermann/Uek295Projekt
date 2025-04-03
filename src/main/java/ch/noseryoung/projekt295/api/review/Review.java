@@ -1,4 +1,5 @@
 package ch.noseryoung.projekt295.api.review;
+import ch.noseryoung.projekt295.api.retail_store.RetailStore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,13 +12,17 @@ import java.util.UUID;
 public class Review {
   @Id
   @GeneratedValue(strategy = GenerationType.UUID)
-    @Column(name = "reviev_id")
-    UUID reviev_id;
-    @Column(name = "numstars")
-    int num_stars;
-    @Column(name = "comment")
+    @Column
+    UUID reviewId;
+    @Column
+    int numStars;
+    @Column
     String comment;
-    @Column(name = "is_verified")
-    boolean is_verified;
+    @Column
+    boolean isVerified;
+
+    @ManyToOne
+    private RetailStore retailStore;
+
 
 }

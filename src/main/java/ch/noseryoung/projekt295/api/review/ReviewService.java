@@ -33,8 +33,8 @@ public class ReviewService {
     }
 
     public Review updateReview(Review review) {
-        if (!reviewRepository.existsById(review.getReviev_id())) {
-            throw new RuntimeException("Review mit ID " + review.getReviev_id() + " nicht gefunden.");
+        if (!reviewRepository.existsById(review.getReviewId())) {
+            throw new RuntimeException("Review mit ID " + review.getReviewId() + " nicht gefunden.");
         }
         return reviewRepository.save(review);
     }
