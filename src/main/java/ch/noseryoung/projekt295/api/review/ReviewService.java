@@ -1,42 +1,41 @@
 package ch.noseryoung.projekt295.api.review;
 
-import org.springframework.stereotype.Repository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.UUID;
-@Repository
 
+@Service
 public class ReviewService {
-    private final ReviewRepository reviewReposetory;
 
-    public ReviewService(ReviewRepository reviewReposetory) {
-        this.reviewReposetory = reviewReposetory;
+    @Autowired
+    private final ReviewRepository reviewRepository;
+
+    public ReviewService(ReviewRepository reviewRepository) {
+        this.reviewRepository = reviewRepository;
     }
 
     public Review createReview(Review review) {
-        return reviewReposetory.save(review);
+        return reviewRepository.save(review);
     }
 
     public Review getReviewById(UUID id) {
-        return reviewReposetory.findById(id).orElse(null);
+        return reviewRepository.findById(id).orElse(null);
     }
 
     public List<Review> getAllReviews() {
-        return reviewReposetory.findAll();
+        return reviewRepository.findAll();
     }
 
     public void deleteReview(UUID id) {
-        reviewReposetory.deleteById(id);
+        reviewRepository.deleteById(id);
     }
 
     public Review updateReview(Review review) {
-        if (!reviewReposetory.existsById(review.getReviev_id())) {
+        if (!reviewRepository.existsById(review.getReviev_id())) {
             throw new RuntimeException("Review mit ID " + review.getReviev_id() + " nicht gefunden.");
         }
-        return reviewReposetory.save(review);
+        return reviewRepository.save(review);
     }
-
-
-
-
 }

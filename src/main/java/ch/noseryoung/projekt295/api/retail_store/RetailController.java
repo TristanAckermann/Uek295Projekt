@@ -1,4 +1,3 @@
-
 package ch.noseryoung.projekt295.api.retail_store;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,31 +10,29 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/retailstores")
-
-
 public class RetailController {
 
     @Autowired
     private RetailService service;
 
-    @PostMapping
+    @PostMapping("/create")
     public ResponseEntity<RetailStore> createRetailStore(@RequestBody RetailStore retailStore) {
         return ResponseEntity.status(201).body(service.createRetailStore(retailStore));
     }
 
-    @GetMapping
+    @GetMapping("/getAll")
     public ResponseEntity<List<RetailStore>> getAllRetailStores() {
         return ResponseEntity.ok(service.getAllRetailStores());
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/get/{id}")
     public ResponseEntity<RetailStore> getRetailStoreById(@PathVariable UUID id) {
         Optional<RetailStore> store = service.getRetailStoreById(id);
         return store.map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/update/{id}")
     public ResponseEntity<RetailStore> updateRetailStore(@PathVariable UUID id, @RequestBody RetailStore retailStore) {
         Optional<RetailStore> existingStore = service.getRetailStoreById(id);
         if (existingStore.isPresent()) {
@@ -45,7 +42,8 @@ public class RetailController {
             return ResponseEntity.notFound().build();
         }
     }
-    @DeleteMapping
+
+    @DeleteMapping("/delite/{id}")
     public ResponseEntity<Void> deleteRetailStore(@PathVariable UUID id) {
         Optional<RetailStore> existingStore = service.getRetailStoreById(id);
         if (existingStore.isPresent()) {
@@ -55,5 +53,4 @@ public class RetailController {
             return ResponseEntity.notFound().build();
         }
     }
-
 }
