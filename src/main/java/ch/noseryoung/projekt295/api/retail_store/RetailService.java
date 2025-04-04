@@ -1,5 +1,6 @@
 package ch.noseryoung.projekt295.api.retail_store;
 
+import ch.noseryoung.projekt295.api.exeptionhandling.RetailStoreNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -42,4 +43,10 @@ public class RetailService {
         }
         repository.deleteById(id);
     }
+
+    public RetailStore getRetailStoreOrThrow(UUID id) {
+        return repository.findById(id)
+                .orElseThrow(() -> new RetailStoreNotFoundException("Retail Store mit ID " + id + " wurde nicht gefunden."));
+    }
+
 }

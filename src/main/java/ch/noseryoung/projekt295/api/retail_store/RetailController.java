@@ -52,4 +52,6 @@ public class RetailController {
             return ResponseEntity.notFound().build();
         }
     }
+
+
 }
