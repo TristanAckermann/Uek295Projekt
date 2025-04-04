@@ -10,7 +10,7 @@ Dies ist ein Spring Boot-Projekt namens **Projekt295**, das im Repository [K295P
 
 Stelle sicher, dass du die folgenden Voraussetzungen installiert hast:
 
-- **Java 8** oder höher
+- **Java 23** oder höher
 - **IntelliJ IDEA** (oder eine andere IDE, die Spring Boot-Projekte unterstützt)
 - **Gradle** (wird in der Regel durch IntelliJ automatisch unterstützt)
 - **Git** (zum Klonen des Repositories)
