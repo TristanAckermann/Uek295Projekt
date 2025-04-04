@@ -16,7 +16,7 @@ public class ApiError {
         this.timestamp = timestamp;
     }
 
-    // Getter und Setter
+
     public HttpStatus getStatus() {
         return status;
     }

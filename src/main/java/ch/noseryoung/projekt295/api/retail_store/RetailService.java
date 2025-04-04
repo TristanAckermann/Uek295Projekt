@@ -44,9 +44,5 @@ public class RetailService {
         repository.deleteById(id);
     }
 
-    public RetailStore getRetailStoreOrThrow(UUID id) {
-        return repository.findById(id)
-                .orElseThrow(() -> new RetailStoreNotFoundException("Retail Store mit ID " + id + " wurde nicht gefunden."));
-    }
 
 }
