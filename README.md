@@ -4,7 +4,7 @@ Hier ist das gleiche Dokument für ein Gradle-Projekt:
 
 # Projekt295
 
-Dies ist ein Spring Boot-Projekt namens **Projekt295**, das im Repository [K295Projekt](https://github.com/TristanAckermann/-K295Projekt) gehostet wird. In dieser Anleitung wird beschrieben, wie man das Projekt lokal aufsetzt und ausführt.
+Dies ist ein Spring Boot-Projekt namens **Projekt295**, das im Repository [ÜK295Projekt]([https://github.com/TristanAckermann/Uek295Projekt]) gehostet wird. In dieser Anleitung wird beschrieben, wie man das Projekt lokal aufsetzt und ausführt.
 
 ## Voraussetzungen
 
