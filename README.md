@@ -1,5 +1,6 @@
-# Uek295Projekt
-Uek295Projekt
+Hier ist das gleiche Dokument für ein Gradle-Projekt:
+
+---
 
 # Projekt295
 
@@ -11,7 +12,7 @@ Stelle sicher, dass du die folgenden Voraussetzungen installiert hast:
 
 - **Java 8** oder höher
 - **IntelliJ IDEA** (oder eine andere IDE, die Spring Boot-Projekte unterstützt)
-- **Maven** (wird in der Regel durch IntelliJ automatisch unterstützt)
+- **Gradle** (wird in der Regel durch IntelliJ automatisch unterstützt)
 - **Git** (zum Klonen des Repositories)
 
 ## 1. Projekt klonen
@@ -30,12 +31,12 @@ git clone https://github.com/TristanAckermann/-K295Projekt.git
 
 IntelliJ sollte automatisch erkennen, dass es sich um ein Spring Boot-Projekt handelt und alle Abhängigkeiten herunterladen.
 
-## 3. Maven-Projekt importieren
+## 3. Gradle-Projekt importieren
 
-Wenn IntelliJ das Projekt nicht automatisch als Maven-Projekt erkennt:
+Wenn IntelliJ das Projekt nicht automatisch als Gradle-Projekt erkennt:
 
-1. Öffne das **Maven-Tool-Fenster** in IntelliJ (klicke auf das kleine Elefanten-Symbol auf der rechten Seite).
-2. Klicke mit der rechten Maustaste auf das Projekt und wähle **Reimport**. Dies lädt alle Maven-Abhängigkeiten neu.
+1. Öffne das **Gradle-Tool-Fenster** in IntelliJ (auf der rechten Seite solltest du ein Symbol mit einem kleinen Elefanten sehen).
+2. Klicke mit der rechten Maustaste auf das Projekt und wähle **Reimport**. Dies lädt alle Gradle-Abhängigkeiten neu.
 
 ## 4. Spring Boot-Anwendung ausführen
 
@@ -68,7 +69,7 @@ http://localhost:8080
 
 Falls beim Starten des Projekts Probleme auftreten:
 
-1. Stelle sicher, dass alle Maven-Abhängigkeiten erfolgreich heruntergeladen wurden.
+1. Stelle sicher, dass alle Gradle-Abhängigkeiten erfolgreich heruntergeladen wurden.
 2. Überprüfe die Konsolenausgabe auf Fehler.
 3. Stelle sicher, dass keine anderen Anwendungen bereits den Port `8080` verwenden.
 
@@ -79,4 +80,5 @@ Für detaillierte Informationen zu Spring Boot und wie man es verwendet, siehe d
 ---
 
 Viel Erfolg bei der Verwendung von **Projekt295**! Wenn du Fragen hast, zögere nicht, das Repository zu besuchen oder ein Issue zu eröffnen.
+
 
